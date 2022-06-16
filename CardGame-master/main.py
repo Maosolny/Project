@@ -7,6 +7,8 @@
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 import random
 
+from numpy import full
+
 from card_game import CardGame, Player, Card
 
 player = 1
@@ -42,7 +44,7 @@ class RandomPlayer(Player):
 
 
 def main():
-    game = CardGame(RandomPlayer(), RandomPlayer(), RandomPlayer(), RandomPlayer(), delay=100, display=False)
+    game = CardGame(RandomPlayer(), RandomPlayer(), RandomPlayer(), RandomPlayer(), delay=100, display=True, full_deck=False)
     print(game.start())
     print(game.start())
 
